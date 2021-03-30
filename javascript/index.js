@@ -56,7 +56,21 @@ function setResetBtn() {
 
 // Start/Stop Button
 btnLeft.addEventListener('click', () => {
-  // ... your code goes here
+  if(btnLeft.innerText === 'START'){
+    btnLeft.innerHTML = 'STOP';
+    btnRight.innerHTML = 'SPLIT';
+    chronometer.startClick();
+  } else{
+    btnLeft.innerText = 'START'
+    btnRight.innerText = 'RESET'
+    chronometer.stopClick();
+  }
+    
+    btnLeft.classList.toggle('stop');
+    btnRight.classList.toggle('split')
+    
+  
+  
 });
 
 // Reset/Split Button
